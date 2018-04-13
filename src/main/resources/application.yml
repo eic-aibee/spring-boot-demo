@@ -1,0 +1,21 @@
+server:
+  tomcat:
+    basedir: .
+    accesslog:
+      enabled: true
+      pattern: %t %a "%r" %s (%D ms)
+
+logging:
+  file: demo3.log
+
+---
+spring:
+  profiles: dev
+
+---
+spring:
+  profiles: test
+
+---
+spring:
+  profiles: production

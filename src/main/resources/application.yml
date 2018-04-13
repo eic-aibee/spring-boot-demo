@@ -3,7 +3,7 @@ server:
     basedir: .
     accesslog:
       enabled: true
-      pattern: %t %a "%r" %s (%D ms)
+      pattern: "%t %a '%r' %s (%D ms)"
 
 logging:
   file: demo3.log

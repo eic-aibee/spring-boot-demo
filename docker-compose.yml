@@ -3,8 +3,11 @@ services:
   web:
     image: "zpng/demo2"
     ports:
-     - "8080:8080"
-#    volumes:
-#     - .:/code
+      - "8080:8080"
+#    deploy:
+#      replicas: 2
+#      restart_policy:
+#              condition: on-failure
+
   redis:
     image: "redis:alpine"

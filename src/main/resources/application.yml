@@ -10,11 +10,15 @@ server:
 ---
 spring:
   profiles: dev
+logging.config: classpath:logback-spring-dev.xml
+
 
 ---
 spring:
   profiles: test
+logging.config: classpath:logback-spring-test.xml
 
 ---
 spring:
   profiles: prod
+logging.config: classpath:logback-spring-prod.xml

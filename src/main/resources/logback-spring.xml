@@ -16,14 +16,15 @@
 
     <!--输出到文件-->
     <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${log.path}</file>
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <!-- rollover daily -->
-            <fileNamePattern>demo3-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-            <!-- each file should be at most 100MB, keep 60 days worth of history, but at most 20GB -->
-            <maxFileSize>100MB</maxFileSize>
-            <maxHistory>60</maxHistory>
-            <totalSizeCap>20GB</totalSizeCap>
+        <!--<file>${log.path}</file>-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>demo2.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+            <!--<fileNamePattern>demo3-%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+            <!--<maxFileSize>100MB</maxFileSize>-->
+            <!--<maxHistory>60</maxHistory>-->
+            <!--<totalSizeCap>20GB</totalSizeCap>-->
         </rollingPolicy>
         <encoder>
             <pattern>${FILE_LOG_PATTERN}</pattern>
@@ -45,11 +46,11 @@
 
     <!-- 测试环境+开发环境. 多个使用逗号隔开. -->
     <!--<springProfile name="test,dev">-->
-        <!--<logger name="com.dudu.controller" level="info"/>-->
+    <!--<logger name="com.dudu.controller" level="info"/>-->
     <!--</springProfile>-->
     <!--&lt;!&ndash; 生产环境. &ndash;&gt;-->
     <!--<springProfile name="prod">-->
-        <!--<logger name="com.dudu.controller" level="ERROR"/>-->
+    <!--<logger name="com.dudu.controller" level="ERROR"/>-->
     <!--</springProfile>-->
 
 </configuration>

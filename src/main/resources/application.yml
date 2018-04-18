@@ -6,6 +6,8 @@ server:
     accesslog:
       enabled: true
       pattern: "%t %a '%r' %s (%D ms)"
+      # 控制access log是否立马输出
+      buffered: false
 
 ---
 spring:

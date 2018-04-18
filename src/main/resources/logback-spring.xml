@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration scan="true" scanPeriod="60 seconds" debug="false">
+<configuration scan="true" scanPeriod="10 seconds" debug="false">
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
     <!--<contextName>logback</contextName>-->
     <property name="log.path" value="logs"/>
@@ -48,9 +48,15 @@
     <!--<springProfile name="test,dev">-->
     <!--<logger name="com.dudu.controller" level="info"/>-->
     <!--</springProfile>-->
-    <!--&lt;!&ndash; 生产环境. &ndash;&gt;-->
+    <!-- 生产环境. -->
     <!--<springProfile name="prod">-->
     <!--<logger name="com.dudu.controller" level="ERROR"/>-->
     <!--</springProfile>-->
 
+    <springProfile name="test,dev">
+        <logger name="com.example.demo2.controller" level="info" addtivity="false"/>
+    </springProfile>
+    <springProfile name="prod">
+    <logger name="com.example.demo2.controller" level="error" addtivity="false"/>
+    </springProfile>
 </configuration>

@@ -17,4 +17,4 @@ spring:
 
 ---
 spring:
-  profiles: production
+  profiles: prod

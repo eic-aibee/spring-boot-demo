@@ -53,10 +53,10 @@
     <!--<logger name="com.dudu.controller" level="ERROR"/>-->
     <!--</springProfile>-->
 
-    <springProfile name="test,dev">
-        <logger name="com.example.demo2.controller" level="info" addtivity="false"/>
-    </springProfile>
-    <springProfile name="prod">
-        <logger name="com.example.demo2.controller" level="error" addtivity="false"/>
-    </springProfile>
+    <!--<springProfile name="test,dev">-->
+        <!--<logger name="com.example.demo2.controller" level="info" addtivity="false"/>-->
+    <!--</springProfile>-->
+    <!--<springProfile name="prod">-->
+        <!--<logger name="com.example.demo2.controller" level="error" addtivity="false"/>-->
+    <!--</springProfile>-->
 </configuration>

@@ -1,12 +1,11 @@
-#server:
-#  tomcat:
-#    basedir: .
-#    accesslog:
-#      enabled: true
-#      pattern: "%t %a '%r' %s (%D ms)"
-
-#logging:
-#  file: demo3.log
+server:
+  port: 8080
+  tomcat:
+    maxThreads: 500
+    basedir: .
+    accesslog:
+      enabled: true
+      pattern: "%t %a '%r' %s (%D ms)"
 
 ---
 spring:
